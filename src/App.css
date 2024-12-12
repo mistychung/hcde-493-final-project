@@ -1,38 +1,130 @@
-.App {
+/* General App Styles */
+.app {
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.list-view {
+  width: 50%;
+  padding: 25px;
+}
+
+.calendar-view {
+  width: 50%;
+  height: 700px;
+  padding: 25px;
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.create-button {
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+.create-button:hover {
+  background-color: #e61766;
+}
+
+/* Sort Button Styles */
+.sort-buttons {
+  display: flex;
+  gap: 4px;
+}
+
+.sort-buttons button {
+  background-color: rgba(51, 51, 51, 0.05);
+  border-radius: 8px;
+  border-width: 0;
+  border: 1px solid rgb(221, 221, 221);
+  color: #333333;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  padding: 10px 12px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.sort-buttons button:hover {
+  background-color: #dbdbdb;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* Assignment Card Styles */
+.assignment-card {
+  border: 1px solid #dddddd;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  background-color: rgb(255, 251, 236);
+  cursor: pointer;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.assignment-card.focused {
+  background-color: #f0f8ff;
+  outline: none;
 }
 
-.App-link {
-  color: #61dafb;
+.input-group {
+  margin-bottom: 10px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.input-field {
+  padding: 5px;
+  margin-left: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  width: calc(100% - 120px);
+}
+
+.input-field:focus {
+  outline: 2px solid #007bff;
+}
+
+.text-row {
+  margin-bottom: 5px;
+}
+
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+
+/* Calendar styles */
+.completed-event {
+  text-decoration: line-through;
+  color: gray;
 }
